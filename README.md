@@ -2,14 +2,14 @@
 
 This is a plugin for [Nagios](https://www.nagios.org/). It is able to track the number of players connected to a game server that uses the Source engine. It supports both alerting and performance data recording, which allows you to combine this with an RRD tool such as nagiosgraph to track historical server usage.
 
-##Compatible games:
+## Compatible games:
 This plugin should be compatible with any game which runs on the source engine. Below is a list of some of the most popular titles this plugin supports.
 - TF2
 - CS:GO / CSS
 - L4D2
 - HL2:DM
 
-##Installation
+## Installation
 Once you have cloned the repository, run the "make" command in the directory and it will produce a binary nammed "check_source_playercount". Copy this to your nagios plugins folder (on FreeBSD this is /usr/local/libexec/nagios/).
 
 Next, you need to locate the file that contains your command definitions, by default this is usually "commands.cfg". In here add an entry such as below:
@@ -36,7 +36,7 @@ define service {
 
 In the above example, Nagios will begin warning when 10 players are on the server, and will begin sending critical alerts when 15 players are on the server.
 
-###Optional
+### Optional
 
 You may wish to increase the rate of checking for the service. Below is a template for checking every minute, and notifying every 15 minutes that a warning or critical condition exists:
 
